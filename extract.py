@@ -32,9 +32,16 @@ for i, ctr in enumerate(sorted_ctrs):
 
     if width>20 and hieght>20:
 
-     dsize = (24, 24)
 
-     output = cv2.resize(roi, dsize)
+        new_width = 24
+
+        new_height = new_width * height / width
+
+        new_height = 24
+
+        new_width = new_height * width / height
+
+        output = roi.resize((new_width,new_height), Image.ANTIALIAS)
 
     # show ROI
     #cv2.rectangle(image,(x,y),( x + w, y + h ),(90,0,255),2)
