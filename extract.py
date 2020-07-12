@@ -30,7 +30,7 @@ for i, ctr in enumerate(sorted_ctrs):
 
     width,hieght = roi.shape[:2]
 
-    if width>20 and hieght>20:
+    if width>20 and hieght>20:#keep aspect ratio
 
 
         new_width = 24
