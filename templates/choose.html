@@ -12,17 +12,23 @@
     <title>Choose</title>
   </head>
   <body>
-    <div class="container">#error 
-        <h3>Choose the alphabet  {% set letters='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' %}
-            {% for letter in letters[i:i+1] %} {# first 6 chars #}
-            {{ letter }}
-            {% endfor %}</h3>
-
-        <div><button id="next">Next</button></div>
-        <script>$('#next').click(function(){
-            window.location.href='http://localhost:5000/choose';
-         })</script>
+    <div class="container">
+      <h3>Chose the alphabet <h3 id="alpha">A</h3>
+      <button id="next">Next</button>
     </div>
+    <script>n=1
+    $("#next").click(function(){
+      if(n<58){
+        if(n>25 && n<31){
+          n=n+6
+        }
+        var chr = String.fromCharCode(65 + n);
+        console.log(chr)
+        $("#alpha").text(chr);
+        n++
+      }
+    })
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
