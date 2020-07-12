@@ -1,8 +1,6 @@
 from flask import Flask,render_template,request
 app = Flask(__name__)
 
-i=0
-
 
 @app.route('/')
 def hello_world():
@@ -21,7 +19,4 @@ def uploader_file():
 
 @app.route('/choose',methods = ['GET', 'POST'])
 def choose():
-    global i
-    while i <=48 :
-        i+=1
-        return render_template('choose.html',i=i)
+    return render_template('choose.html')
