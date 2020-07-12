@@ -1,5 +1,5 @@
 # Handwriter
-A website which converts text to handwriting.
+A website which converts text to your handwriting.
 
 ## Order to run
 blemishremover
